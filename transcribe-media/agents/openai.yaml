@@ -1,4 +1,4 @@
 interface:
   display_name: "Transcribe & Analyze Media"
-  short_description: "Transcribe local media and analyze the content"
-  default_prompt: "Use $transcribe-media to transcribe this video and summarize its key ideas and action items."
+  short_description: "Transcribe local media in any language and analyze the content"
+  default_prompt: "Use $transcribe-media to transcribe this recording and summarize its key ideas and action items."
