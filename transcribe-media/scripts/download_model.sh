@@ -3,6 +3,7 @@
 set -euo pipefail
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$script_dir/whisper_env.sh"
 source "$script_dir/model_catalog.sh"
 
 usage() {
@@ -22,7 +23,7 @@ usage() {
 # Existing cached models are never overwritten or downloaded again.
 
 model_name="small"
-model_cache="${WHISPER_MODEL_CACHE:-$HOME/.cache/whisper}"
+model_cache="$(default_model_cache)"
 
 while (($#)); do
   case "$1" in
